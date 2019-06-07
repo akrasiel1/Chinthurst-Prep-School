@@ -474,6 +474,7 @@ strong {}
    ========================================================================== */
 
 /* HERO SECTION */
+
 .logo {
   height: 100px;
   margin: 20px 0 0 50px;
@@ -626,23 +627,24 @@ nav {
     color: #e4e4e4;
 }
 
-.news-container h3 {
+.content h3, .content h2 {
     font-family: 'Lora';
 }
 
-.news-container p, .news-container a {
+.content p, .content a {
     font-family: 'Open Sans';
 }
 
-.news-container p{
+.content p{
     font-size: 13px;
 }
 
-.news-container a {
+.content a {
     text-decoration: none;
     color: #e4e4e4;
     font-size: 10px;
 }
+
 .news-container img {
     width: 100%;
 }
@@ -654,6 +656,50 @@ nav {
 
 .news-container:hover {
     box-shadow: 2px 2px 5px #979797;
+}
+
+/* MAIN SECTION STYLING */
+
+.ht-welcome {
+    background: url('../img/assets/headteacher-welcome.jpg');
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(16, 30, 67, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ht-message {
+    margin: 0 30px;
+}
+
+.chronicle {
+    background: url('../img/assets/chronicle.jpg');
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.chronicle a {
+    font-family: 'Lora';
+    font-size: 20px;
+    color: #e4e4e4;
+    background-color: rgba(196, 0, 59, 0.7);
+    position: absolute;
+    top: 95%;
+    left: 250px;
+    transform: translateY(-95%);
+    padding: 5px;
 }
 
 
