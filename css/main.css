@@ -555,7 +555,8 @@ nav {
   font-family: 'Open Sans';
   color: #101e43;
   box-shadow: 2px 2px 5px #979797;
-
+  position: relative;
+  z-index: 1;
 }
 
 .openday {
@@ -611,6 +612,7 @@ nav {
 
 #news {
     background-color: #f6f6f6;
+    padding: 35px 0;
 }
 
 /* h1 styling */
