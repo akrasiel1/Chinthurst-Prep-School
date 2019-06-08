@@ -278,7 +278,7 @@ section {
 
 .content {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 88%;
 }
 
@@ -660,7 +660,7 @@ nav {
     box-shadow: 2px 2px 5px #979797;
 }
 
-/* MAIN SECTION STYLING */
+/* MAIN - FIRST SECTION STYLING */
 
 .ht-welcome {
     background: url('../img/assets/headteacher-welcome.jpg');
@@ -686,7 +686,7 @@ nav {
 }
 
 .chronicle {
-    background: url('../img/assets/chronicle.jpg');
+    background: url('../img/assets/chronicle.jpg') center;
     width: 100%;
     height: 300px;
     position: relative;
@@ -699,9 +699,60 @@ nav {
     background-color: rgba(196, 0, 59, 0.7);
     position: absolute;
     top: 95%;
-    left: 250px;
+    right: 0;
     transform: translateY(-95%);
     padding: 5px;
+    margin-right: 10px;
+}
+
+/* MAIN - SECOND SECTION STYLING */
+
+.chint-life {
+    border-bottom: solid 1px #979797;
+}
+
+.chint-life img {
+    width: 100%;
+}
+
+.chint-life h4 {
+    font-family: 'Montserrat';
+}
+
+.fa-plus {
+    color: #d20040;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.events {
+    border: solid 1px #979797;
+}
+
+.events h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.events p {
+    color: #004741;
+}
+
+.events ul, events li {
+    margin: 0;
+    padding: 0;
+}
+
+.events ul li {
+    padding: 2px 20px;
+}
+
+.events ul li {
+    list-style-type: none;
+}
+
+.events ul li:nth-child(odd) {
+    background: #f3bacb;
 }
 
 
