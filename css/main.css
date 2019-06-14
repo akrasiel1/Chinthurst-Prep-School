@@ -709,6 +709,7 @@ nav {
 
 .chint-life {
     border-bottom: solid 1px #979797;
+    min-height: 515px;
 }
 
 .chint-life img {
@@ -727,6 +728,7 @@ nav {
 
 .events {
     border: solid 1px #979797;
+    min-height: 500px;
 }
 
 .events h2 {
@@ -736,23 +738,27 @@ nav {
 
 .events p {
     color: #004741;
+    font-weight: bold;
 }
 
-.events ul, events li {
-    margin: 0;
-    padding: 0;
+.event-date {
+  padding: 5px 20px;
 }
 
-.events ul li {
-    padding: 2px 20px;
+.event-date:nth-child(even) {
+  background-color: #f3bacb;
 }
 
-.events ul li {
-    list-style-type: none;
+/* TESTIMONIALS SECTION STYLING */
+
+#testimonials h1 {
+  font-family: 'Lora';
+  border: none;
+  color: #d20040;
 }
 
-.events ul li:nth-child(odd) {
-    background: #f3bacb;
+#testimonials p {
+  font-weight: bold;
 }
 
 
