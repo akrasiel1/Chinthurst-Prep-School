@@ -5,6 +5,9 @@ $( document ).ready(function() {
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
+    //SET CURRENT YEAR
+    $('#year').text(new Date().getFullYear());
+
     //SET LIGHTSLIDER
     $("#testimonials").lightSlider({
         item: 1,
