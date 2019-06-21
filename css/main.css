@@ -476,8 +476,8 @@ strong {}
 /* HERO SECTION */
 
 .logo {
-  height: 100px;
-  margin: 20px 0 0 50px;
+  height: 120px;
+  margin: 10px 0 10px 50px;
 }
 
 .hero-section {
@@ -501,9 +501,11 @@ strong {}
 /* NAV MENU */
 
 nav {
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.5s ease;
 }
 
 .menu-links li {
@@ -517,6 +519,23 @@ nav {
   font-weight: 600;
   margin-right: 35px;
 }
+
+/* FIXED NAVBAR PROPERTIES */
+
+nav.solid {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #004741;
+  height: 90px;
+  transition: 0.5s ease;
+}
+
+nav.solid .logo {
+  height: 75px;
+}
+
 
 /* NAV LINKS STYLING */
 
@@ -836,7 +855,6 @@ footer {
   margin-top: 35px;
   font-weight: bold;
 }
-
 
 
 

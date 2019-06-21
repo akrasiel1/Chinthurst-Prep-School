@@ -19,5 +19,14 @@ $( document ).ready(function() {
         pause: 8000
     });
 
+    // STICKY NAVBAR
 
+    $(window).on('scroll', function() {
+        if($(window).scrollTop()){
+            $('nav').addClass('solid');
+        }
+        else {
+            $('nav').removeClass('solid');
+        }
+    })
 });
