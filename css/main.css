@@ -481,9 +481,7 @@ strong {}
 }
 
 .hero-section {
-  background-image: url('../img/assets/hero.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../img/assets/hero.jpg) center no-repeat;
   background-size: cover;
   height: 600px;
 }
@@ -546,12 +544,12 @@ nav.solid .logo {
 }
 
 .icon {
-  font-size: 14px;
+  font-size: 1.2em;
   padding-right: 5px;
 }
 
 .links-top li a {
-  font-size: 11px;
+  font-size: 0.75em;
 }
 
 .links-top li:nth-child(3) {
@@ -562,7 +560,7 @@ nav.solid .logo {
 }
 
 .links-bottom {
-  font-size: 14px;
+  font-size: 0.9em;
 }
 
 /* SUB HERO SECTIONS STYLING */
@@ -600,7 +598,7 @@ nav.solid .logo {
   line-height: 30px;
   text-decoration: none;
   color: #e4e4e4;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .openday a:hover {
@@ -623,8 +621,12 @@ nav.solid .logo {
 }
 
 .stats1 p {
-  font-size: 12px;
+  font-size: 1em;
   margin-top: -20px;
+}
+
+.stats2 span {
+  font-size: 1.2em;
 }
 
 /* NEWS SECTION */
@@ -657,13 +659,13 @@ nav.solid .logo {
 }
 
 .content p{
-    font-size: 13px;
+    font-size: 0.75em;
 }
 
 .content a {
     text-decoration: none;
     color: #e4e4e4;
-    font-size: 10px;
+    font-size: 0.6em;
 }
 
 .news-container img {
@@ -675,6 +677,10 @@ nav.solid .logo {
     min-height: 215px;
 }
 
+.news-text h3 {
+  font-size: 1.1em;
+}
+
 .news-container:hover {
     box-shadow: 2px 2px 5px #979797;
 }
@@ -682,9 +688,8 @@ nav.solid .logo {
 /* MAIN - FIRST SECTION STYLING */
 
 .ht-welcome {
-    background: url('../img/assets/headteacher-welcome.jpg');
-    background-size: cover
-    width: 100%;
+    background: url('../img/assets/headteacher-welcome.jpg') center no-repeat;
+    background-size: cover;
     height: 300px;
     position: relative;
 }
@@ -714,7 +719,7 @@ nav.solid .logo {
 
 .chronicle a {
     font-family: 'Lora';
-    font-size: 20px;
+    font-size: 1.25em;
     color: #e4e4e4;
     background-color: rgba(196, 0, 59, 0.7);
     position: absolute;
@@ -736,13 +741,14 @@ nav.solid .logo {
     width: 100%;
 }
 
-.chint-life h4 {
+.chint-life a {
     font-family: 'Montserrat';
+    font-size: 1em;
+    color: #000;
 }
 
 .fa-plus {
     color: #d20040;
-    font-size: 14px;
     margin-left: 10px;
 }
 
@@ -752,13 +758,26 @@ nav.solid .logo {
 }
 
 .events h2 {
+    font-size: 1.75em;
+    font-weight: lighter;
     text-align: center;
-    text-decoration: underline;
+    border-bottom: solid 1px #979797;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
 }
 
 .events p {
     color: #004741;
     font-weight: bold;
+    margin-top: 0;
+}
+
+.events h3 {
+  font-size: 1.15em;
+  margin-bottom: 5px;
+  font-weight: lighter;
 }
 
 .event-date {
@@ -801,7 +820,7 @@ footer {
 }
 
 .footer-icons a i{
-  font-size: 25px;
+  font-size: 2.75em;
   margin-left: 35px;
   margin-top: 15px;
 }
@@ -819,8 +838,9 @@ footer {
 }
 
 .footer-links a {
-  font-size: 12px;
+  font-size: 0.65em;
   font-family: 'Montserrat';
+  margin-bottom: 6px;
 }
 
 .footer-contact {
@@ -842,7 +862,7 @@ footer {
 
 .footer-contact i {
   margin-right: 10px;
-  font-size: 25px;
+  font-size: 1.75em;
 }
 
 .footer-logo img{
@@ -852,7 +872,7 @@ footer {
 .credits {
   text-align: center;
   font-size: 10px;
-  margin-top: 35px;
+  margin-top: 45px;
   font-weight: bold;
 }
 
