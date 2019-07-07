@@ -513,9 +513,10 @@ nav {
 .menu-links li a {
   font-family: 'Montserrat';
   text-decoration: none;
+  text-align: center;
   color: #e4e4e4;
   font-weight: 600;
-  margin-right: 35px;
+  margin: 0 15px;
 }
 
 /* FIXED NAVBAR PROPERTIES */
@@ -525,7 +526,7 @@ nav.solid {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #004741;
+  background-color: #004842;
   height: 90px;
   transition: 0.5s ease;
 }
@@ -537,7 +538,7 @@ nav.solid .logo {
 
 /* NAV LINKS STYLING */
 
-.links-container {
+.links-container{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -549,18 +550,96 @@ nav.solid .logo {
 }
 
 .links-top li a {
-  font-size: 0.75em;
+  font-size: 0.65em;
 }
 
 .links-top li:nth-child(3) {
   border-left: solid 1px #e4e4e4;
   border-right: solid 1px #e4e4e4;
   margin-right: 15px;
-  padding-left: 30px;
+  padding: 0 15px;
 }
 
 .links-bottom {
-  font-size: 0.9em;
+  font-size: 0.8em;
+}
+
+/* NON HOMEPAGE NAVBAR*/
+
+.alt-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #004842;
+  height: 90px;
+  transition: 0.5s ease;
+}
+
+.alt-nav img {
+  height: 75px;
+}
+
+/* INNER PAGE STYLING */
+
+.sub-menu {
+margin: 90px 0;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: #d20040;
+position: fixed;
+padding-inline-start: 0;
+top: 0;
+max-width: inherit;
+width: inherit;
+}
+
+.sub-menu li {
+  list-style: none;
+  width: 25%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.sub-menu li a {
+  font-family: 'Montserrat';
+  font-size: 0.65em;
+  font-weight: bold;
+}
+
+.sub-menu li:hover {
+  background-color: #C4003C;
+}
+
+/*SPORTS SECTION STYLING */
+
+#sports {
+  margin-top: 150px;
+}
+
+#sports h2 {
+  font-size: 1.2em;
+  color: #004842;
+}
+
+
+
+.sports-text {
+  padding-inline-start: 25px;
+  padding-inline-end: 25px;
+
+}
+
+.rugby-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#sports img {
+  margin-top: 100px;
+  width: 80%;
 }
 
 /* SUB HERO SECTIONS STYLING */
@@ -639,14 +718,14 @@ nav.solid .logo {
 /* h1 styling */
 
 .content h1 {
-    border-bottom: solid 2px #004741;
+    border-bottom: solid 2px #004842;
     font-family: 'Montserrat';
 }
 
 /*NEWS CELL STYLING */
 
 .news-container {
-    background-color: #004741;
+    background-color: #004842;
     color: #e4e4e4;
 }
 
@@ -769,7 +848,7 @@ nav.solid .logo {
 }
 
 .events p {
-    color: #004741;
+    color: #004842;
     font-weight: bold;
     margin-top: 0;
 }
