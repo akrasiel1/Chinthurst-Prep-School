@@ -535,6 +535,10 @@ nav.solid .logo {
   height: 75px;
 }
 
+nav.solid ul li a {
+  margin: 0;
+  padding: 10px 20px;
+}
 
 /* NAV LINKS STYLING */
 
@@ -546,7 +550,7 @@ nav.solid .logo {
 
 .icon {
   font-size: 1.2em;
-  padding-right: 5px;
+  margin-right: 5px;
 }
 
 .links-top li a {
@@ -556,8 +560,6 @@ nav.solid .logo {
 .links-top li:nth-child(3) {
   border-left: solid 1px #e4e4e4;
   border-right: solid 1px #e4e4e4;
-  margin-right: 15px;
-  padding: 0 15px;
 }
 
 .links-bottom {
@@ -578,6 +580,15 @@ nav.solid .logo {
 
 .alt-nav img {
   height: 75px;
+}
+
+.alt-nav ul li a {
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.alt-nav ul li a:hover, nav.solid ul li a:hover {
+  background-color: #044b45;
 }
 
 /* INNER PAGE STYLING */
@@ -606,6 +617,8 @@ width: inherit;
   font-family: 'Montserrat';
   font-size: 0.65em;
   font-weight: bold;
+  display: block;
+  padding: 5px 0;
 }
 
 .sub-menu li:hover {
