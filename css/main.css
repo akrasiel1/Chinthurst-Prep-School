@@ -563,7 +563,7 @@ nav.solid ul li a {
 }
 
 .links-bottom {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 /* NON HOMEPAGE NAVBAR*/
@@ -589,6 +589,81 @@ nav.solid ul li a {
 
 .alt-nav ul li a:hover, nav.solid ul li a:hover {
   background-color: #044b45;
+}
+
+/* BURGER ICON */
+
+#burger-icon {
+  width: 40px;
+  height: 25px;
+  position: relative;
+  right: 5%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+
+#burger-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #e4e4e4;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#burger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#burger-icon span:nth-child(2),#burger-icon span:nth-child(3) {
+  top: 12px;
+}
+
+#burger-icon span:nth-child(4) {
+  top: 24px;
+}
+
+#burger-icon.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+#burger-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#burger-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#burger-icon.open span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
 }
 
 /* INNER PAGE STYLING */
@@ -656,9 +731,10 @@ width: inherit;
 /* SUB HERO SECTIONS STYLING */
 
 .sub-hero {
-  height: 150px;
-  display: flex;
-  flex-direction: row;
+  height: 125px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   font-family: 'Open Sans';
   color: #101e43;
   box-shadow: 2px 2px 5px #979797;
@@ -667,9 +743,14 @@ width: inherit;
 }
 
 .openday {
-  padding: 0 50px;
-  min-width: 600px;
+  padding: 0 30px;
+  min-width: 450px;
 }
+
+.openday p {
+  font-size: 0.85em;
+}
+
 
 .openday,
 .sub-hero-right {
@@ -680,7 +761,7 @@ width: inherit;
 }
 
 .openday a {
-  margin-left: 50px;
+  margin-left: 45px;
   border: none;
   padding: 0 20px;
   background: #d20040;
@@ -688,7 +769,8 @@ width: inherit;
   line-height: 30px;
   text-decoration: none;
   color: #e4e4e4;
-  font-size: 0.75em;
+  font-size: 0.7em;
+  display: block;
 }
 
 .openday a:hover {
@@ -696,22 +778,28 @@ width: inherit;
 }
 
 .reigate-logo {
-  max-height: 150px;
+  max-height: 125px;
 }
 
 .stats1 {
   background-color: #f6f6f6;
-  height: 150px;
+  height: 125px;
+}
+
+.stats1 h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .stats1,
 .stats2 {
-  padding: 0 40px;
+  padding: 0 35px;
   font-weight: bold;
+  width: 50%;
 }
 
-.stats1 p {
-  font-size: 1em;
+.stats1 p, .stats2 p {
+  font-size: 0.85em;
   margin-top: -20px;
 }
 
@@ -817,7 +905,7 @@ width: inherit;
     right: 0;
     transform: translateY(-95%);
     padding: 5px;
-    margin-right: 10px;
+    margin-right: 10px;  
 }
 
 /* MAIN - SECOND SECTION STYLING */
@@ -912,7 +1000,6 @@ footer {
   padding-top: 20px;
   font-family: 'Montserrat';
   color: #e4e4e4;
-  height: 300px;
 }
 
 .footer-icons a i{
@@ -954,6 +1041,8 @@ footer {
 
 .address {
   margin-top: -15px;
+  font-size: 0.9em;
+  font-family: 'Montserrat';
 }
 
 .footer-contact i {
@@ -969,6 +1058,8 @@ footer {
   text-align: center;
   font-size: 10px;
   margin-top: 45px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
   font-weight: bold;
 }
 
@@ -983,9 +1074,135 @@ footer {
 
 
 /*===================== Responsive Styling =========================*/
-@media only screen and (max-width: 1280px) {}
+@media only screen and (max-width: 1280px) {
 
-@media only screen and (max-width: 1024px) {}
+
+  /* NAV LINKS FONT RESIZE */
+
+   .links-bottom {
+    font-size: 0.8em;
+    transition: all 0.1s ease; 
+  }
+
+  .links-bottom li a, nav.solid .links-bottom a, .alt-nav .links-bottom a {
+    margin: 0 15px;
+    padding: 0;
+    transition: all 0.1s ease;
+  }
+
+  /* HERO SECTION */
+
+  .hero-section {
+    box-shadow: 2px 2px 8px #979797;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-text {
+    top: 75%;
+  }
+
+  /* TYPOGRAPHY */
+
+  .hero-text {
+    font-size: 0.9em;
+  }
+  
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .content h4 {
+    font-size: 0.9em;
+  }
+
+  /* SUB-HERO SECTION */
+
+  .sub-hero {
+    display: none;
+  }
+
+ 
+
+  /* NEWS SECTION */
+
+  .gs-quarter {
+    width: 50% !important;
+  }
+
+  /* FOOTER STYLING */
+
+  #footer-socials {
+    width: 100% !important;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+  }
+
+  #footer-menu, #footer-contacts {
+    width: 50% !important;
+  }
+
+.footer-contact {
+  position: absolute;
+    right: 50px;
+  }
+
+  
+  #footer-logo {
+    width: 100% !important;
+  }
+
+  .footer-logo img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  /* MAKING NAVBAR SOLID AS DEFAULT */
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #004842;
+    height: 90px;
+    transition: 0.5s ease;
+  }
+
+  #burger-icon {
+    display: block;
+  }
+
+  nav .logo {
+    height: 75px;
+  }
+
+  /* HIDING NAV ITEMS */
+
+  .links-container {
+    display: none;
+  }
+
+  /* HERO TEXT */
+
+  .hero-text {
+    font-size: 0.75em;
+  }
+
+   /* LIFE @ CHINTHURST */
+
+   .gs-twothirds, #events, #tweets {
+    width: 100% !important;
+  }
+}
 
 @media only screen and (max-width: 768px) {}
 

@@ -28,5 +28,11 @@ $( document ).ready(function() {
         else {
             $('nav').removeClass('solid');
         }
-    })
+    });
+
+    // BURGER MENU SEYYINGS
+
+    $('#burger-icon').click(function(){
+		$(this).toggleClass('open');
+	});
 });
