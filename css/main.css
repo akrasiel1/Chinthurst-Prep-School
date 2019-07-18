@@ -1254,6 +1254,7 @@ footer {
 
   .footer-icons a i {
     font-size: 2em;
+    margin: 0 5px;
   }
 
   .footer-contact i {
@@ -1263,9 +1264,34 @@ footer {
 
 }
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
 
-@media only screen and (max-width: 320px) {}
+  footer h5 {
+    font-size: 0.55em;
+  }
+
+  .address p {
+    font-size: 0.5em;
+  }
+
+  .footer-links a {
+    font-size: 0.45em;
+  }
+
+  .footer-icons a i {
+    font-size: 2em;
+  }
+
+  .footer-contact i {
+    font-size: 0.85em;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+
+}
 
 
 /* ==========================================================================
