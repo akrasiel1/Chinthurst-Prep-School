@@ -494,6 +494,7 @@ strong {}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px #414141;
 }
 
 /* NAV MENU */
@@ -594,7 +595,7 @@ nav.solid ul li a {
 /* BURGER ICON */
 
 #burger-icon {
-  width: 40px;
+  width: 35px;
   height: 25px;
   position: relative;
   right: 5%;
@@ -613,7 +614,7 @@ nav.solid ul li a {
 #burger-icon span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: #e4e4e4;
   opacity: 1;
@@ -866,34 +867,29 @@ width: inherit;
 /* MAIN - FIRST SECTION STYLING */
 
 .ht-welcome {
-    background: url('../img/assets/headteacher-welcome.jpg') center no-repeat;
+    background: url('../img/assets/headteacher-welcome-ol.jpg') center no-repeat;
     background-size: cover;
     height: 300px;
     position: relative;
 }
 
-.overlay {
-    background: rgba(16, 30, 67, 0.8);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    color: #e4e4e4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .ht-message {
-    margin: 0 30px;
+    margin: 0 35px;
+    color: #e4e4e4;
+    position: absolute;
+    top: 20%;
 }
 
 .chronicle {
-    background: url('../img/assets/chronicle.jpg') center;
+    background: url('../img/assets/chronicle.jpg') center no-repeat;
+    background-size: cover;
     width: 100%;
     height: 300px;
     position: relative;
 }
+
+
 
 .chronicle a {
     font-family: 'Lora';
@@ -1047,7 +1043,7 @@ footer {
 
 .footer-contact i {
   margin-right: 10px;
-  font-size: 1.75em;
+  font-size: 1.55em;
 }
 
 .footer-logo img{
@@ -1056,7 +1052,7 @@ footer {
 
 .credits {
   text-align: center;
-  font-size: 10px;
+  font-size: 0.5em;
   margin-top: 45px;
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -1095,7 +1091,7 @@ footer {
   .hero-section {
     box-shadow: 2px 2px 8px #979797;
     position: relative;
-    z-index: 1;
+    z-index: 3;
   }
 
   .hero-text {
@@ -1116,14 +1112,16 @@ footer {
     font-size: 0.9em;
   }
 
-  /* SUB-HERO SECTION */
-
-  .sub-hero {
-    display: none;
+  .news-text h3 {
+    font-size: 1.35em;
   }
 
- 
+  /* SUB-HERO SECTION */
 
+  .reigate-logo {
+    display: none;
+  }
+ 
   /* NEWS SECTION */
 
   .gs-quarter {
@@ -1139,13 +1137,17 @@ footer {
     font-size: 1.5em;
   }
 
-  #footer-menu, #footer-contacts {
-    width: 50% !important;
+  #footer-menu {
+    width: 65% !important;
+  }
+
+  #footer-contacts {
+    width: 35% !important;
   }
 
 .footer-contact {
   position: absolute;
-    right: 50px;
+    right: 20px;
   }
 
   
@@ -1185,6 +1187,10 @@ footer {
     height: 75px;
   }
 
+  .sub-hero {
+    display: none;
+  }
+
   /* HIDING NAV ITEMS */
 
   .links-container {
@@ -1195,22 +1201,67 @@ footer {
 
   .hero-text {
     font-size: 0.75em;
+    width: 80%;
   }
 
    /* LIFE @ CHINTHURST */
 
-   .gs-twothirds, #events, #tweets {
+   .gs-twothirds, #events, #tweets, #chronicle {
     width: 100% !important;
   }
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
 
-@media only screen and (max-width: 667px) {}
+  /* LIFE @ CHINTHURST CELL - FROM THIRD TO HALF */
+
+  .chint-life .gs-third {
+    width: 50% !important;
+  }
+
+}
+
+@media only screen and (max-width: 667px) {
+  .gs-quarter {
+    width: 100% !important;
+  }
+}
 
 @media only screen and (max-width: 568px) {}
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+
+  .hero-text {
+    font-size: 0.6em;
+    width: 85%;
+  }
+
+  .chint-life a {
+    font-size: 0.75em;
+  }
+
+  footer h5 {
+    font-size: 0.7em;
+  }
+
+  .address p {
+    font-size: 0.65em;
+  }
+
+  .footer-links a {
+    font-size: 0.55em;
+  }
+
+  .footer-icons a i {
+    font-size: 2em;
+  }
+
+  .footer-contact i {
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
+
+}
 
 @media only screen and (max-width: 375px) {}
 
