@@ -481,7 +481,7 @@ strong {}
 }
 
 .hero-section {
-  background: url(../img/assets/hero.jpg) center no-repeat;
+  background: url(../img/assets/homepage/hero.jpg) center no-repeat;
   background-size: cover;
   height: 600px;
 }
@@ -702,7 +702,7 @@ nav.solid ul li a {
 }
 
 .reigate-mobile a {
-  background: url(../img/assets/reigate-mobile.jpg) center no-repeat;
+  background: url(../img/assets/homepage/reigate-mobile.jpg) center no-repeat;
   height: 120px;
   width: 100%;
   position: absolute;
@@ -761,15 +761,20 @@ width: inherit;
 
 }
 
-.rugby-photo {
+.innerpage-photo {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.secondary-img {
+  display: none;
 }
 
 #sports img {
-  margin-top: 100px;
-  width: 80%;
+  width: 100%;
+  margin-top: 70px;
 }
 
 /* SUB HERO SECTIONS STYLING */
@@ -788,7 +793,7 @@ width: inherit;
 
 .openday {
   padding: 0 30px;
-  min-width: 450px;
+  width: 450px;
 }
 
 .openday p {
@@ -851,6 +856,12 @@ width: inherit;
   font-size: 1.2em;
 }
 
+/* OPEN DAY - MOBILE */
+
+.openday-mobile {
+  display: none;
+}
+
 /* NEWS SECTION */
 
 #news {
@@ -910,7 +921,7 @@ width: inherit;
 /* MAIN - FIRST SECTION STYLING */
 
 .ht-welcome {
-    background: url('../img/assets/headteacher-welcome-ol.jpg') center no-repeat;
+    background: url('../img/assets/homepage/headteacher-welcome-ol.jpg') center no-repeat;
     background-size: cover;
     height: 300px;
     position: relative;
@@ -925,7 +936,7 @@ width: inherit;
 }
 
 .chronicle {
-    background: url('../img/assets/chronicle.jpg') center no-repeat;
+    background: url('../img/assets/homepage/chronicle.jpg') center no-repeat;
     background-size: cover;
     width: 100%;
     height: 300px;
@@ -1125,7 +1136,6 @@ footer {
   /* HERO SECTION */
 
   .hero-section {
-    box-shadow: 2px 2px 8px #979797;
     position: relative;
     z-index: 3;
   }
@@ -1236,6 +1246,41 @@ footer {
     display: none;
   }
 
+  /* SHOWING OPEN DAY */
+
+  .openday-mobile {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    height: 100px;
+    width: 100%;
+    font-family: 'Open Sans';
+    color: #101e43;
+    box-shadow: 2px 2px 5px #979797;
+    position: relative;
+    z-index: 1;
+  }
+
+  .openday-mobile p {
+    font-size: 1.4em;
+  }
+
+  .openday-mobile a {
+    margin-left: 25px;
+    border: none;
+    padding: 0 20px;
+    background: #d20040;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #e4e4e4;
+    font-size: 1em;
+    display: block;
+  }
+
   /* BOTTOM LINKS RESIZED */
   nav .links-top, .alt-nav .links-top {
     font-size: 0.9em;
@@ -1258,6 +1303,33 @@ footer {
    .gs-twothirds, #events, #tweets, #chronicle {
     width: 100% !important;
   }
+
+  /* INNER PAGE STYLING */
+
+  .grid-cell {
+    flex: auto;
+  }
+
+  .gs-half {
+    width: 100% !important;
+  }
+
+  .innerpage-photo {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .secondary-img {
+    display: block;
+  }
+
+  #sports img {
+    width: 33.3%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 5px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -1272,6 +1344,22 @@ footer {
 
   #burger-icon {
     display: block;
+  }
+
+  /* OPENDAY RESTYLING */
+
+  .openday-mobile p{
+    font-size: 1.1em;
+  }
+
+  .openday-mobile a {
+    font-size: 0.8em;
+  }
+
+  /* RESTYLING WIDTH OF INNER PAGE ELEMENTS */
+
+  #half-left, #half-right {
+    width: 100% !important;
   }
 
   /* DISPLAYING MOBILE MENU */
@@ -1290,12 +1378,12 @@ footer {
   /* MOBILE MENU FONT & MARGINS */
 
   .mobile-links a {
-    font-size: 1.8em;
-    padding: 20px 0;
+    font-size: 1.75em;
+    padding: 15px 0;
   }
 
   .social-mobile a {
-    font-size: 2.25em;
+    font-size: 2.2em;
     padding: 0 30px;
   }
 
@@ -1343,6 +1431,19 @@ footer {
   .gs-quarter {
     width: 100% !important;
   }
+
+  /* SUB-MENU - INNER PAGE */
+
+  .sub-menu {
+    flex-wrap: wrap;
+  }
+
+  .sub-menu li  {
+    width: 50%;
+    border: solid 1px #e4e4e4;
+    border-top: none;
+    border-right: none;
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -1366,6 +1467,20 @@ footer {
   .hero-text {
     font-size: 0.6em;
     width: 85%;
+  }
+
+  /* OPENDAY RESTYLING */
+
+  .openday-mobile {
+    height: 65px;
+  }
+  
+  .openday-mobile p {
+    font-size: 0.6em;
+  }
+
+  .openday-mobile a {
+    font-size: 0.45em;
   }
 
   /* BURGER ICON */
@@ -1401,7 +1516,7 @@ footer {
   /* CHINTHURST LIFE */
 
   .chint-life a {
-    font-size: 0.75em;
+    font-size: 0.65em;
   }
 
   /* EVENTS */
@@ -1466,6 +1581,12 @@ footer {
   .social-mobile a {
     font-size: 1.25em;
     padding: 0 20px;
+  }
+
+  /* NEWS SECTION */
+
+  #news h3 {
+    font-size: 1.1em;
   }
 
   /*EVENTS SECTION */

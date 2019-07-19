@@ -38,7 +38,7 @@ $( document ).ready(function() {
         $('.alt-nav .mobile-menu').toggleClass('mobile-show');
     });
 
-    // MAKE MOBILE MENU DISAPPEAR AFTER CLICKING A LINK */
+    // REVERT NAVBAR TO NORMAL AFTER CLICKING A LINK */
     $(".mobile-menu a").click(function() {
         $(".mobile-menu").toggleClass("mobile-visible");
         $(".icon").toggleClass("open");
