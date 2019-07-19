@@ -30,9 +30,18 @@ $( document ).ready(function() {
         }
     });
 
-    // BURGER MENU SEYYINGS
+    // BURGER MENU SETTINGS
 
     $('#burger-icon').click(function(){
-		$(this).toggleClass('open');
-	});
+        $(this).toggleClass('open');
+        $('.mobile-menu').toggleClass('mobile-show');
+        $('.alt-nav .mobile-menu').toggleClass('mobile-show');
+    });
+
+    // MAKE MOBILE MENU DISAPPEAR AFTER CLICKING A LINK */
+    $(".mobile-menu a").click(function() {
+        $(".mobile-menu").toggleClass("mobile-visible");
+        $(".icon").toggleClass("open");
+      });
+    
 });

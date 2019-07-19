@@ -667,6 +667,48 @@ nav.solid ul li a {
   left: 50%;
 }
 
+/* MOBILE MENU STYLING */
+
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu a {
+  color: #e4e4e4;
+  text-decoration: none;
+  font-size: 1.25em;
+  list-style: none;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  background: #004842;
+  display: flex;
+  padding: 8px 0;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+}
+
+.social-mobile {
+  display: flex;
+  flex-direction: row;
+  background: #004842;
+  justify-content: center;
+}
+
+.social-mobile a {
+  margin: 15px 20px;
+  font-size: 1.8em;
+}
+
+.reigate-mobile a {
+  background: url(../img/assets/reigate-mobile.jpg) center no-repeat;
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  bottom: 60px;
+}
+
 /* INNER PAGE STYLING */
 
 .sub-menu {
@@ -678,6 +720,7 @@ background-color: #d20040;
 position: fixed;
 padding-inline-start: 0;
 top: 0;
+z-index: 1;
 max-width: inherit;
 width: inherit;
 }
@@ -1062,13 +1105,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
 /*===================== Responsive Styling =========================*/
 @media only screen and (max-width: 1280px) {
 
@@ -1096,6 +1132,12 @@ footer {
 
   .hero-text {
     top: 75%;
+  }
+
+  /* LOGO RESIZING - INNER PAGE */
+
+  .alt-nav .logo {
+    height: 50px !important;
   }
 
   /* TYPOGRAPHY */
@@ -1179,22 +1221,29 @@ footer {
     transition: 0.5s ease;
   }
 
-  #burger-icon {
-    display: block;
-  }
-
   nav .logo {
     height: 75px;
+    margin-left: 25px;
   }
+
+  .alt-nav .logo {
+    height: 30px !important;
+  }
+
+  /* HIDING SUB-HERO SECTION */
 
   .sub-hero {
     display: none;
   }
 
-  /* HIDING NAV ITEMS */
+  /* BOTTOM LINKS RESIZED */
+  nav .links-top, .alt-nav .links-top {
+    font-size: 0.9em;
+  }
 
-  .links-container {
-    display: none;
+  nav .links-bottom, .alt-nav .links-bottom {
+    font-size: 0.6em;
+    padding: 0 2px;
   }
 
   /* HERO TEXT */
@@ -1213,6 +1262,63 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
+  /* HIDING DESKTOP MENU */
+
+  .links-container {
+    display: none;
+  }
+
+  /* DISPLAYING BURGER ICON */
+
+  #burger-icon {
+    display: block;
+  }
+
+  /* DISPLAYING MOBILE MENU */
+
+  .mobile-menu.mobile-show {
+    display: block;
+    margin-top: 65px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    background: #004842;
+  }
+
+  /* MOBILE MENU FONT & MARGINS */
+
+  .mobile-links a {
+    font-size: 1.8em;
+    padding: 20px 0;
+  }
+
+  .social-mobile a {
+    font-size: 2.25em;
+    padding: 0 30px;
+  }
+
+  /*RESIZING NAVBAR TO FIT TABLET & MOBILE */
+
+  nav, .alt-nav, nav.solid {
+    height: 65px;
+  }
+
+  nav .logo, nav.solid .logo {
+    height: 55px;
+  }
+
+  .alt-nav .logo {
+    height: 50px !important;
+  }
+
+  /* SUB-MENU - INNER PAGE */
+
+  .sub-menu {
+    margin: 65px 0;
+  }
+
   /* LIFE @ CHINTHURST CELL - FROM THIRD TO HALF */
 
   .chint-life .gs-third {
@@ -1222,23 +1328,107 @@ footer {
 }
 
 @media only screen and (max-width: 667px) {
+
+    /* MOBILE MENU FONT & MARGINS */
+
+    .mobile-links {
+      padding: 10px 0;
+    }
+   
+    .mobile-links a {
+      font-size: 1.5em;
+      padding: 5px 0;
+    }
+
   .gs-quarter {
     width: 100% !important;
   }
 }
 
-@media only screen and (max-width: 568px) {}
+@media only screen and (max-width: 568px) {
+
+   /* MOBILE MENU FONT & MARGINS */
+
+  .mobile-links {
+    padding: 10px 0;
+  }
+ 
+  .mobile-links a {
+    font-size: 1.35em;
+    padding: 10px 0;
+  }
+}
 
 @media only screen and (max-width: 480px) {
+
+  /*HERO TEXT */
 
   .hero-text {
     font-size: 0.6em;
     width: 85%;
   }
 
+  /* BURGER ICON */
+
+  #burger-icon {
+    width: 28px;
+  }
+
+  #burger-icon span {
+    height: 2px;
+  }
+
+  #burger-icon span:nth-child(2),#burger-icon span:nth-child(3) {
+    top: 10px;
+  }
+  
+  #burger-icon span:nth-child(4) {
+    top: 20px;
+  }
+
+  .social-mobile a {
+    font-size: 1.45em;
+    padding: 0 20px;
+  }
+
+  /* HEADTEACHERS MESSAGE */
+
+  .ht-message {
+    top: 5%;
+    margin: 0 20px;
+  }
+
+  /* CHINTHURST LIFE */
+
   .chint-life a {
     font-size: 0.75em;
   }
+
+  /* EVENTS */
+
+  .events {
+    min-height: 350px;
+  }
+
+  .event-date {
+    padding: 5px 10px;
+  }
+
+  .events h2 {
+    font-size: 1.45em;
+    padding: 5px 0;
+
+  }
+
+  .events h3 {
+    font-size: 0.95em;
+  }
+
+  .events p {
+    font-size: 0.65em;
+  }
+
+  /* FOOTER STYLING */
 
   footer h5 {
     font-size: 0.7em;
@@ -1266,6 +1456,32 @@ footer {
 
 @media only screen and (max-width: 375px) {
 
+   /* MOBILE MENU FONT & MARGINS */
+
+   .mobile-links a {
+    font-size: 1.15em;
+    padding: 5px 0;
+  }
+
+  .social-mobile a {
+    font-size: 1.25em;
+    padding: 0 20px;
+  }
+
+  /*EVENTS SECTION */
+
+  .events {
+    min-height: 335px;
+  }
+
+  .events h3 {
+    font-size: 0.85em;
+  }
+
+  .events p {
+    font-size: 0.55em;
+  }
+
   footer h5 {
     font-size: 0.55em;
   }
@@ -1288,10 +1504,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 320px) {
-
-
-}
+@media only screen and (max-width: 320px) {}
 
 
 /* ==========================================================================
