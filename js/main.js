@@ -36,6 +36,7 @@ $( document ).ready(function() {
         $(this).toggleClass('open');
         $('.mobile-menu').toggleClass('mobile-show');
         $('.alt-nav .mobile-menu').toggleClass('mobile-show');
+        $('nav').toggleClass('coloured');
     });
 
     // REVERT NAVBAR TO NORMAL AFTER CLICKING A LINK */

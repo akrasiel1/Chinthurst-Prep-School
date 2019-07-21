@@ -1219,14 +1219,13 @@ footer {
 
 @media only screen and (max-width: 1024px) {
 
-  /* MAKING NAVBAR SOLID AS DEFAULT */
+  /* NAVBAR STYLING */
 
   nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #004842;
     height: 90px;
     transition: 0.5s ease;
   }
@@ -1344,6 +1343,14 @@ footer {
 
   #burger-icon {
     display: block;
+    transition: all 0.3 ease;
+  }
+
+  /*MAKES NAV MENU SOLID ON ICON CLICK */
+
+  nav.coloured {
+    background-color: #004842;
+    transition: none;
   }
 
   /* OPENDAY RESTYLING */
@@ -1444,6 +1451,7 @@ footer {
     border-top: none;
     border-right: none;
   }
+
 }
 
 @media only screen and (max-width: 568px) {
@@ -1476,11 +1484,11 @@ footer {
   }
   
   .openday-mobile p {
-    font-size: 0.6em;
+    font-size: 0.65em;
   }
 
   .openday-mobile a {
-    font-size: 0.45em;
+    font-size: 0.5em;
   }
 
   /* BURGER ICON */
@@ -1625,7 +1633,14 @@ footer {
   }
 }
 
-@media only screen and (max-width: 320px) {}
+@media only screen and (max-width: 320px) {
+
+  /* OPENDAY RESTYLING */
+
+  .openday-mobile p {
+    letter-spacing: -0.02em;
+  }
+}
 
 
 /* ==========================================================================
