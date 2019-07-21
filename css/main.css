@@ -1452,6 +1452,13 @@ footer {
     border-right: none;
   }
 
+  .sub-menu li:nth-child(odd) {
+    border-left: none;
+  }
+
+  .sub-menu li:nth-child(1n+3) {
+    border-bottom: none;
+  }
 }
 
 @media only screen and (max-width: 568px) {
